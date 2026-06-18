@@ -1,3 +1,7 @@
 <?php
 
-echo "API INDEX WORKING";
+require __DIR__ . '/../vendor/autoload.php';
+
+$app = require __DIR__ . '/../bootstrap/app.php';
+
+echo "BOOTSTRAP OK";
