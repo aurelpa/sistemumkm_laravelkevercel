@@ -4,12 +4,12 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $app = require __DIR__ . '/../bootstrap/app.php';
 
+$kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
+
 try {
-    $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
-    echo "KERNEL OK";
+    $request = Illuminate\Http\Request::capture();
+    echo "REQUEST OK";
 } catch (Throwable $e) {
     echo "<pre>";
-    echo $e->getMessage();
-    echo "\n\n";
-    echo $e->getTraceAsString();
+    echo $e;
 }
