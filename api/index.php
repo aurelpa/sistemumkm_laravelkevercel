@@ -4,4 +4,4 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $app = require __DIR__ . '/../bootstrap/app.php';
 
-echo "BOOTSTRAP OK";
+echo get_class($app);
