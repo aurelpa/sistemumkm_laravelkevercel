@@ -1,13 +1,9 @@
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
+define('LARAVEL_START', microtime(true));
 
-$app = require __DIR__ . '/../bootstrap/app.php';
+require __DIR__.'/../vendor/autoload.php';
 
-echo "<pre>";
+$app = require __DIR__.'/../bootstrap/app.php';
 
-echo "Laravel: " . $app->version() . PHP_EOL;
-
-echo "Loaded Providers:" . PHP_EOL;
-
-print_r(array_keys($app->getLoadedProviders()));
+$app->handleRequest(Illuminate\Http\Request::capture());
