@@ -78,7 +78,7 @@
                                     @foreach($latestUmkm as $item)
                                     <tr>
                                         <td>
-                                            <div style="font-weight:400;color:black;">{{ $item->nama_usaha }}</div>
+                                            <div style="font-weight:400;color:white;">{{ $item->nama_usaha }}</div>
                                         </td>
                                         <td>{{ $item->nama_pemilik }}</td>
                                         <td><span class="badge-jenis">{{ $item->jenis_usaha }}</span></td>
